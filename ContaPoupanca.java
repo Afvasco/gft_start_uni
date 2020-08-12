@@ -2,7 +2,7 @@
 
 public class ContaPoupanca extends Conta
 {
-   private double rend;
+   private double rend, impCalc;
    
    public ContaPoupanca(int numero, String titular, double saldo)
    {
@@ -15,6 +15,12 @@ public class ContaPoupanca extends Conta
    {
       return rend = saldo * 0.05; 
    }
+   
+   public double calcularImposto()
+   {
+      return impCalc = rend * 0.1; 
+   }
+
    
    public void imprime()
    {

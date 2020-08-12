@@ -2,7 +2,7 @@
 
 public class ContaCorrente extends Conta
 {
-   private double rend = 0;
+   private double rend, impCalc;
       
    public ContaCorrente(int numero, String titular, double saldo)
    {
@@ -15,6 +15,12 @@ public class ContaCorrente extends Conta
    {
       return rend = saldo * 0.03; 
    }
+   
+   public double calcularImposto()
+   {
+      return impCalc = rend * 0.25; 
+   }
+
    
    public void imprime()
    {

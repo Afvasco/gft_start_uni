@@ -1,7 +1,7 @@
 //GFT Exerc 03
 
 
-public abstract class Conta
+public abstract class Conta implements Imposto
 {
    protected int numero;
    protected String titular;
@@ -34,11 +34,14 @@ public abstract class Conta
    
    public abstract double rendimento();
    
+   public abstract double calcularImposto();
+   
    public void imprime()
    {
       System.out.println("Numero Conta : " + numero);
       System.out.printf("Titular : %s\n", titular);
       System.out.printf("Saldo : %.2f\n", saldo);
       System.out.printf("Rendimento : %.2f\n", rendimento());
+      System.out.printf("Imposto : %.2f\n", calcularImposto());
    }
 }
